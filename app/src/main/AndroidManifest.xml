@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="example.com.fitnesstracker">
+
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_running"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_running"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".InfoActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".About"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+        <provider
+            android:authorities="example.com.fitnesstracker.FitnessTrackerContentProvider"
+            android:name=".FitnessTrackerContentProvider"/>
+        <uses-library android:name="org.apache.http.legacy"
+            android:required="false"/>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAiEBVm8y1kgAVRD_tT81t_b1SdeI4692Q" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
